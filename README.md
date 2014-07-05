@@ -16,4 +16,4 @@ Crafting Web Applications is maintained by [minio, s.r.o.](http://minio.sk/).
 License
 -------
 
-Crafting Web Applications is © 2014 minio, s.r.o. It is distributed under the [Attribution-NonCommercial 4.0 International ](http://creativecommons.org/licenses/by-nc/4.0/).
+Crafting Web Applications is © 2014 minio, s.r.o. and distributed under the [Attribution-NonCommercial 4.0 International ](http://creativecommons.org/licenses/by-nc/4.0/).
