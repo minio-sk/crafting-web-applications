@@ -27,7 +27,7 @@ Credits
 -------
 Thank you, [contributors](https://github.com/minio-sk/crafting-web-applications/graphs/contributors)!
 
-Crafting Web Applications is maintained by [minio, s.r.o.](http://minio.sk/).
+Crafting Web Applications is maintained by [minio, s.r.o.](http://minio.sk/)
 
 
 License
