@@ -16,7 +16,7 @@ Course materials for what what we believe makes you a better web developer.
 * [Lesson 10: Web Frameworks](/web-frameworks)
 * [Lesson 11: Frontend development](/frontend-development)
 * [Lesson 11: Deployment](/deployment)
-* [Lesson 12: OOP & Test-driven developement](/oop-tdd)
+* [Lesson 12: OOP & Test-driven development](/oop-tdd)
 * [Lesson 13: Usability](/usability)
 * [Lesson 14: Analytics](/analytics)
 * [Lesson 15: Security](/security)
