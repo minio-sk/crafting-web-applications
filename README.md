@@ -3,7 +3,7 @@ Crafting Web Applications
 
 Course materials for what what we believe makes you a better web developer.
 
-Resources provided here have used for introductory courses about web development. However for advanced readers (and ambitious students) we also provide links to excellent resources (books, videos, reports, academic papers) that we collected over the years and go really deep into each topic.
+Resources provided here have been used for introductory web development courses. However for advanced readers (and ambitious students) we also provide links to excellent resources (books, videos, reports, academic papers) that we collected over the years and go really deep into each topic.
  
 Enjoy the course and thanks for any feedback!
 
