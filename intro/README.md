@@ -3,7 +3,9 @@ Qualities of great developers
 
 _**Task:** Think about three main qualities that a great developer should not miss._
 
-_**Task:** Try to state three major problems in software development and think how they relate to developer qualities you came up with._ 
+_**Task:** Try to state three major problems in software development and think how they relate to developer qualities you came up with._
+ 
+ ---
  
 * **Problem: Doing the wrong thing** / **Ability: Seeing the big picture** It's easy to lose focus on a big project or even on a small one if you don't focus on what really adds value to your customer. Think twice about every feature, abstraction or technology you are going to add to your project, code or stack. [Say no by default.](https://gettingreal.37signals.com/ch05_Start_With_No.php)     
 * **Problem: Using the wrong tool for the job** / **Ability: Broad knowledge** Developers constantly analyze risks, costs and advantages. Be it software architecture, cloud hosting provider, database backend or even programming language he uses. A true professional should be able propose different approaches to a given problem and critically discuss pros and cons. To achieve this as a developer you will need to have as broad knowledge as possible. Google helps only if you know what to search for.   

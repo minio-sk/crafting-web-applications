@@ -12,5 +12,7 @@ _**Task:** What would your customer probably say when asked programming language
 
 _**Task:** How did you choose the programming language you use most of the time nowadays?_
 
-Chances are that you probably picked the language you use now because of a very different reason. The most common answer we get is: **Because we learned it at school.** We do not want to argue about whether schools do pick the programming languages right for you, but at least think about if it meets the criteria you would use today.
+---
+
+Chances are that you probably picked the language you use now because of very different reasons. The most common answer we get is: **Because we learned it at school.** We do not want to argue about whether schools do pick the right programming languages for you, but at least think about if it meets the criteria you would use today.
  
