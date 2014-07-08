@@ -3,6 +3,10 @@ Crafting Web Applications
 
 Course materials for what what we believe makes you a better web developer.
 
+Resources provided here have used for introductory courses about web development. However for advanced readers (and ambitious students) we also provide links to excellent resources (books, videos, reports, academic papers) that we collected over the years and go really deep into each topic.
+ 
+Enjoy the course and thanks for any feedback!
+
 * [Lesson 1: Qualities of great developers](/intro)
 * [Lesson 2: Choosing programming language](/choosing-language)
 * [Lesson 3: Learning Ruby](/ruby)
