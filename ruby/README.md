@@ -17,6 +17,101 @@ NOTE: Consider switching pairs in fixed time intervals (20-30minutes), so people
 
 ---
 
+Expression problem
+------------------
+
+```ruby
+class Number < Struct.new(:value)
+  def print
+    value
+  end
+end
+
+class Binary < Struct.new(:left, :right)
+end
+
+class Plus < Binary
+  def print
+    "(#{left.print} + #{right.print})"
+  end
+end
+
+class Times < Binary
+  def print
+    "(#{left.print} * #{right.print})"
+  end
+end
+```
+
+```ruby
+expression = Plus.new(
+  Number.new(1),
+  Times.new(Number.new(2), Number.new(5))
+)
+
+puts expression.print
+# => (1 + (2 * 5))
+```
+
+Adding a new datatype
+
+```ruby
+class Negation < Struct.new(:expression)
+  def print
+    "-#{expression.print}"
+  end
+end
+```
+
+```ruby
+expression = Plus.new(
+  Number.new(1),
+  Times.new(Number.new(2), Negation.new(Number.new(5)))
+)
+
+puts expression.print
+# => (1 + (2 * -5))
+```
+
+Adding a new operation
+
+```ruby
+class Number
+  def eval
+    value
+  end
+end
+
+class Plus
+  def eval
+    left.eval + right.eval
+  end
+end
+
+class Times
+  def eval
+    left.eval * right.eval
+  end
+end
+
+class Negation
+  def eval
+    -expression.eval
+  end
+end
+```
+
+```ruby
+expression = Plus.new(
+  Number.new(1),
+  Times.new(Number.new(2), Negation.new(Number.new(5)))
+)
+
+puts expression.eval
+# => -9
+```
+
+
 Gaining broad knowledge
 -----------------------
 
@@ -32,3 +127,16 @@ Going deeper
 
 Frequently Asked Questions
 --------------------------
+
+Blocks
+------
+
+```ruby
+(5) do 
+```
+
+
+```ruby
+def double_it(array, &block)
+end
+```
