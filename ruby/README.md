@@ -1,5 +1,4 @@
-Learning Ruby
-=============
+# Learning Ruby
 
 _**Task:** Install [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)._
 
@@ -17,8 +16,7 @@ _**Task:** Open Ruby Koans in Rubymine, run `path_to_enlightenment.rb` and follo
 
 ---
 
-Expression problem
-------------------
+## Expression problem
 
 ```ruby
 class Number < Struct.new(:value)
@@ -112,26 +110,26 @@ puts expression.eval
 ```
 
 
-Gaining broad knowledge
------------------------
+## Gaining broad knowledge
 
 * [Ruby Documentation](http://www.ruby-doc.org/)
 
 
 
-Going deeper
-------------
+## Digging deeper
+
 * **Book: [Eloquent Ruby](http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104)** _(448 pages)_  
-It’s easy to write correct Ruby code, but to gain the fluency needed to write great Ruby code, you must go beyond syntax and absorb the “Ruby way” of thinking and problem solving.
+  It’s easy to write correct Ruby code, but to gain the fluency needed to write great Ruby code, you must go beyond syntax and absorb the “Ruby way” of thinking and problem solving.
+
+* **Podcast: [Ruby Rouges](http://rubyrogues.com/)**
+
+* **Newsletter: [Ruby Weekly](http://rubyweekly.com/)**
 
 
-
-Frequently Asked Questions
---------------------------
+## Frequently Asked Questions
 
 ### Blocks
-  
-  
+    
 ```ruby
 def twice(&block)
   block.call

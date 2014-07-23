@@ -1,5 +1,5 @@
-Qualities of great developers
-=============================
+# Qualities of great developers
+
 
 _**Task:** Think about three main qualities that a great developer should not miss._
 
