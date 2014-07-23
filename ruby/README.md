@@ -11,9 +11,9 @@ _**Task:** Download and extract [Ruby Koans](http://rubykoans.com/)._
  
 _**Task:** Open Ruby Koans in Rubymine, run `path_to_enlightenment.rb` and follow the instructions. This normally takes several hours._
 
-NOTE: When possible do this in pairs (pair programming, one computer, two people). If one from the pair is more experienced, as a rule of thumb for learning, the other one should be using the keyboard. This way the experienced one is learning to explain better and the other one learns faster by doing more. 
+*NOTE: When possible do this in pairs (pair programming, one computer, two people). If one from the pair is more experienced, as a rule of thumb for learning, the other one should be using the keyboard. This way the experienced one is learning to explain better and the other one learns faster by doing more.* 
 
-NOTE: Consider switching pairs in fixed time intervals (20-30minutes), so people start to know each other better and solve blocking tasks, other pairs already solved. 
+*NOTE: Consider switching pairs in fixed time intervals (20-30minutes), so people start to know each other better and solve blocking tasks, other pairs already solved.* 
 
 ---
 
@@ -121,22 +121,29 @@ Gaining broad knowledge
 
 Going deeper
 ------------
-
+* **Book: [Eloquent Ruby](http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104)** _(448 pages)_  
+It’s easy to write correct Ruby code, but to gain the fluency needed to write great Ruby code, you must go beyond syntax and absorb the “Ruby way” of thinking and problem solving.
 
 
 
 Frequently Asked Questions
 --------------------------
 
-Blocks
-------
-
+### Blocks
+  
+  
 ```ruby
-(5) do 
+def twice(&block)
+  block.call
+  block.call
+end
+
+twice { puts 'Hi!' }
 ```
 
-
 ```ruby
-def double_it(array, &block)
+def twice
+  yield
+  yield
 end
 ```
