@@ -87,7 +87,15 @@ http://cumulative-hypotheses.org/2011/08/30/tdd-as-if-you-meant-it/
 
 * Static code analyzer: [rubocop](https://github.com/bbatsov/rubocop)
 * Code style grammar nazi for github pull requests: [HoundCI](https://houndci.com/)
+* Code complexity [flog](https://github.com/seattlerb/flog)
+* Code metrics [Code Climate]()
 
 * Continuous integration: [Travis](https://travis-ci.org/)
 * Continuous deployment: [Codeship](https://www.codeship.io/)
 
+## Solutions
+
+* [Scraper exercise solution](solutions/scraper/)
+* [Cache exercise solution](solutions/cache/)
+* [Permissions exercise solution](solutions/permissions/)
+* [Tic-tac-toe exercise solution](solutions/tic-tac-toe/)
