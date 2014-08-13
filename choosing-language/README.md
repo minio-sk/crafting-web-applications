@@ -65,7 +65,7 @@ _TIOBE Programming Community Index lead by C, Java and Objective-C._ |
   
  The mostly cited TIOBE index, is nothing more than a number of search results you get for a given programming language. [No, not a joke.](http://www.tiobe.com/index.php/content/paperinfo/tpci/tpci_definition.htm)
  
- Programing productivity comparisons fail short in significance because developer-to-developer performance varies greatly. Talk about apples to oranges. 
+Programing productivity comparisons fail short in significance because developer-to-developer performance varies greatly. We are still comparing apples to oranges. 
  
- Job ads mostly reflect demand for programmers, not language features or quality. Make sure you are not jumping into horror legacy system maintenance jobs (unless you like it or desperately need cash). In short, **triple check you understand the data behind any benchmark or comparison table**. Next years of your life are at stake here. 
+Job ads mostly reflect demand for programmers, not language features or quality. Make sure you are not jumping into horror legacy system maintenance jobs (unless you like it or desperately need cash). In short, **triple check you understand the data behind any benchmark or comparison table**. Next years of your life are at stake here. 
 
