@@ -2,10 +2,13 @@
 
 ## Gaining broad knowledge
 
-* **Videos: [Google Analytics IQ Lessons](http://www.google.com/analytics/iq.html)** _3 hours_
+* **Course: [Digital Analytics Fundamentals](https://analyticsacademy.withgoogle.com/course01)**
+
 
 * **Article: [How to Set Goals and Goal value in Google Analytics](http://www.christopherspenn.com/2011/08/how-to-set-goals-and-goal-value-in-google-analytics/)**  
   If you don’t have goals and goal values set up in Google Analytics, you’re doing it wrong.
+
+* **Course: [Google Analytics Platform Principles](https://analyticsacademy.withgoogle.com/course02)**
 
 ## Digging deeper
 
