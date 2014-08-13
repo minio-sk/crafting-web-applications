@@ -1,7 +1,7 @@
 # Choosing programming language
 
 
-_**Task:** Imagine you have to choose a programming language you are going to use for the next 5 years. Which would you consider and why?_
+_**Task:** Imagine you have to choose a programming language you are going to use for the next 5 years. Which ones would you consider and why?_
 
     
 _**Task:** What would your manager/boss probably consider when choosing a programming language?_
