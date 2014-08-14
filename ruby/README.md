@@ -28,7 +28,7 @@ class Database
 end
 ```
   
-Besides that this flawed code (not thread-safe), it also shows a weakness in programming language. You can't abstract this. If you were to create and abstract `Singleton` class you can't inherit from any other class. This is very restrictive. How do you make a class singleton in Ruby. You just say so.
+Besides that this is buggy code (not thread-safe), it also shows a weakness in programming language. You can't abstract this. If you were to create and abstract `Singleton` class you can't inherit from any other class. This is very restrictive. How do you make a class singleton in Ruby. You just say so.
   
 ```ruby
 require 'singleton'
