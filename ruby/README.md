@@ -39,7 +39,7 @@ end
 ```
   
 ### Metaprogramming  
-Ruby is often used for creating nice domain specific languages (DSL). You want to create a getter and setter method for a field? Just write `attr_writer :my_field`. Done.
+Ruby is often used for creating nice domain specific languages (DSL). You want to create a getter and setter method for a field? Just write `attr_accessor :my_field`. Done.
 
 Now imagine how you can combine all these features together. Of course Ruby has it's flaws. For starters it's slow and memory hungry. But for building web applications that's irrelevant. Yes, you can scale it.
 
