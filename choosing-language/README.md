@@ -48,22 +48,21 @@ Watch out for jumping into conclusions when looking at benchmarks, popularity, t
 |   | 
 |:-:|
 | ![Computer Language Benchmark Game comparison chart](https://github.com/minio-sk/crafting-web-applications/raw/wip/assets/computer-language-benchmark-game.png)
-_Computer Language Benchmark compares memory and CPU consumption for various problems in different programming languages. However these problems are very specific and odds are that in your day-to-day work will never write a program even remotely similar to these._ |
+_[Computer Language Benchmark Game](http://benchmarksgame.alioth.debian.org/) compares memory and CPU consumption for various problems in different programming languages. However these problems are very specific and odds are that in your day-to-day work will never write a program even remotely similar to these._ |
  
- Popularity and trends are very tricky to interpret. 
+Popularity and trends are very tricky to interpret. 
 
 |   | 
 |:-:|
 | ![Hacker News Programming language popularity poll](https://github.com/minio-sk/crafting-web-applications/raw/wip/assets/hackernews-poll.png)
-_Hacker News programming language popularity poll won by Python, Ruby and Javascript._ |
+_[Hacker News](https://news.ycombinator.com/item?id=3746692) programming language popularity poll won by Python, Ruby and Javascript._ |
 
-|   | 
+|   |
 |:-:|
 | ![TIOBE Programming Community Index](https://github.com/minio-sk/crafting-web-applications/raw/wip/assets/tiobe-index.png)
-_TIOBE Programming Community Index lead by C, Java and Objective-C._ |
-  
-  
- The mostly cited TIOBE index, is nothing more than a number of search results you get for a given programming language. [No, not a joke.](http://www.tiobe.com/index.php/content/paperinfo/tpci/tpci_definition.htm)
+_[TIOBE Programming Community Index](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html)  lead by C, Java and Objective-C._ |
+ 
+The mostly cited TIOBE index, is nothing more than a number of search results you get for a given programming language. [No, not a joke.](http://www.tiobe.com/index.php/content/paperinfo/tpci/tpci_definition.htm)
  
 Programing productivity comparisons fail short in significance because developer-to-developer performance varies greatly. We are still comparing apples to oranges. 
  
