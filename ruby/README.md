@@ -1,22 +1,55 @@
 # Learning Ruby
 
-_**Task:** Install [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)._
+## Why Ruby?
 
-_**Task:** Install Ruby 2.1.2 using `rbenv install 2.1.2` command._
+Ruby is a dynamic object-oriented language that has minimalistic syntax (depending on what you are used to) and interesting features. Here are some.
 
-_**Task:** Install [Rubymine IDE](http://www.jetbrains.com/ruby/)._
- 
-_**Task:** Download and extract [Ruby Koans](http://rubykoans.com/)._
- 
-_**Task:** Open Ruby Koans in Rubymine, run `path_to_enlightenment.rb` and follow the instructions. This normally takes several hours._
+### Everything is an object, every operation a method call
 
-*NOTE: When possible do this in pairs (pair programming, one computer, two people). If one from the pair is more experienced, as a rule of thumb for learning, the other one should be using the keyboard. This way the experienced one is learning to explain better and the other one learns faster by doing more.* 
+Ruby is truly object oriented. Numbers are instances of classes, `1.+(2)` is the same as `1 + 2`. You can ask any object for methods. `1.public_methods` or even `true.class`.
 
-*NOTE: Consider switching pairs in fixed time intervals (20-30minutes), so people start to know each other better and solve blocking tasks, other pairs already solved.* 
+### Blocks  
+Blocks are a very lightweight and powerful construct. Do you want to find even numbers and sort them by absolute value? `[1, -4, 2, -9, 0].select { |n| n.even? }.sort_by {|n| n.abs }` returns `[0, 2, -4]`. Expressive, readable and powerful.
 
----
+### Open classes  
+You can add any method you like to any existing class. Surely you can burn your fingers, but with great power comes great responsibility.
 
-## Expression problem
+### Mixins  
+What do you have to actually write in your language when you want to make a class a Singleton (the design pattern)? Probably something like this
+  
+```ruby 
+class Database
+  def self.instance
+    if @instance.nil?
+      @instance = new
+    end
+    return @instance
+  end
+end
+```
+  
+Besides that this flawed code (not thread-safe), it also shows a weakness in programming language. You can't abstract this. If you were to create and abstract `Singleton` class you can't inherit from any other class. This is very restrictive. How do you make a class singleton in Ruby. You just say so.
+  
+```ruby
+require 'singleton'
+  
+class Database
+  include Singleton
+end
+```
+  
+### Metaprogramming  
+Ruby is often used for creating nice domain specific languages (DSL). You want to create a getter and setter method for a field? Just write `attr_writer :my_field`. Done.
+
+Now imagine how you can combine all these features together. Of course Ruby has it's flaws. For starters it's slow and memory hungry. But for building web applications that's irrelevant. Yes, you can scale it.
+
+## Language flaws and the expression problem
+
+The expression problem is a nice trick you can use to evaluate expressiveness of programming languages. 
+
+> The goal is to define a datatype by cases, where one can add new cases to the datatype and new functions over the datatype, without recompiling existing code, and while retaining static type safety (e.g., no casts).
+
+Let's try this in Ruby. We want to create a program for printing mathematical expressions. 
 
 ```ruby
 class Number < Struct.new(:value)
@@ -26,20 +59,25 @@ class Number < Struct.new(:value)
 end
 
 class Binary < Struct.new(:left, :right)
+  def print
+    "(#{left.print} #{operator_symbol} #{right.print})"
+  end
 end
 
 class Plus < Binary
-  def print
-    "(#{left.print} + #{right.print})"
+  def operator_symbol
+    '+'
   end
 end
 
 class Times < Binary
   def print
-    "(#{left.print} * #{right.print})"
+    '*'
   end
 end
 ```
+
+And here is how you can use it. 
 
 ```ruby
 expression = Plus.new(
@@ -51,7 +89,7 @@ puts expression.print
 # => (1 + (2 * 5))
 ```
 
-Adding a new datatype
+So far so good. Now how about adding a new datatype **without touching existing code**.
 
 ```ruby
 class Negation < Struct.new(:expression)
@@ -60,6 +98,8 @@ class Negation < Struct.new(:expression)
   end
 end
 ```
+
+And how to use it.
 
 ```ruby
 expression = Plus.new(
@@ -71,7 +111,7 @@ puts expression.print
 # => (1 + (2 * -5))
 ```
 
-Adding a new operation
+An easy task for almost any object-oriented language. But try that in a functional language. Now to the interesting part. Let's add a new operation: Evaluating expressions.
 
 ```ruby
 class Number
@@ -99,6 +139,8 @@ class Negation
 end
 ```
 
+Notice how we used open classes and added new methods to existing classes. This could be done for any existing code /library/framework you use. And here is how you can use it.
+
 ```ruby
 expression = Plus.new(
   Number.new(1),
@@ -109,11 +151,29 @@ puts expression.eval
 # => -9
 ```
 
+Nice!
+
+## Learning Ruby
+
+_**Task:** Install [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build)._
+
+_**Task:** Install Ruby 2.1.2 using `rbenv install 2.1.2` command._
+
+_**Task:** Install [Rubymine IDE](http://www.jetbrains.com/ruby/)._
+ 
+_**Task:** Download and extract [Ruby Koans](http://rubykoans.com/)._
+ 
+_**Task:** Open Ruby Koans in Rubymine, run `path_to_enlightenment.rb` and follow the instructions. This normally takes several hours._ If you get stuck consult the frequently asked questions section bellow.
+
+*NOTE: When possible do this in pairs (pair programming, one computer, two people). If one from the pair is more experienced, as a rule of thumb for learning, the other one should be using the keyboard. This way the experienced one is learning to explain better and the other one learns faster by doing more.* 
+
+*NOTE: Consider switching pairs in fixed time intervals (20-30minutes), so people start to know each other better and solve blocking tasks, other pairs already solved.* 
+
+---
 
 ## Gaining broad knowledge
 
 * [Ruby Documentation](http://www.ruby-doc.org/)
-
 
 
 ## Digging deeper
@@ -129,6 +189,7 @@ puts expression.eval
 ## Frequently Asked Questions
 
 ### Blocks
+Blocks will look like magic to you at first since experienced Rubyist use the most implicit form how to write them. Lets look at the most explicit form first.  
     
 ```ruby
 def twice(&block)
@@ -139,9 +200,15 @@ end
 twice { puts 'Hi!' }
 ```
 
+This function takes a block and calls it twice with no parameters. Think of blocks as anonymous classes (e.g. from java) having only one method `call`.
+ 
+Blocks are used so often in Ruby that you can write them in a more implicit way. An equivalent (and more common) way to write `twice` method defined earlier is this.
+
 ```ruby
 def twice
   yield
   yield
 end
 ```
+
+Every time you see `yield` imagine `block.call`. That's all, no more magic.
