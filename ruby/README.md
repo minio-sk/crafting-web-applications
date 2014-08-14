@@ -71,7 +71,7 @@ class Plus < Binary
 end
 
 class Times < Binary
-  def print
+  def operator_symbol
     '*'
   end
 end
@@ -111,7 +111,7 @@ puts expression.print
 # => (1 + (2 * -5))
 ```
 
-An easy task for almost any object-oriented language. But try that in a functional language. Now to the interesting part. Let's add a new operation: Evaluating expressions.
+An easy task for almost any object-oriented language. But try that in a functional language. Now to the interesting part. Let's add a new operation: Evaluating expressions and again **without touching existing code**. Imagine you are extending an existing third-party library.
 
 ```ruby
 class Number
@@ -139,7 +139,7 @@ class Negation
 end
 ```
 
-Notice how we used open classes and added new methods to existing classes. This could be done for any existing code /library/framework you use. And here is how you can use it.
+Notice how we used open classes and added new methods to existing classes. Here is how you can use it.
 
 ```ruby
 expression = Plus.new(
